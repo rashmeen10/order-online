@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> week6 </title>
+
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid purple;
+  
+  
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+input[type="numbder"]{
+ margin: 0px 20px 0px 20px;
+ 
+ color: red;
+ 
+ }
+
+input [type=label] {
+ color=pink}
+ body  {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQM7-N4xpNn6TGpy2Z0NCbs2rR3PVrmtdDDMg&usqp=CAU");
+  
+}
+.heading1{
+color:maroon;
+font-size:25px;
+  text-align: center;}
+
+.heading2{
+color:orange;
+font-size:25px;
+text-align: center;}
+
+.heading3{
+color: brown;
+font-size:25px;
+text-align: center;}
+
+.subheading{
+color:brown;
+font-size:20px;
+text-align: center;
+}
+.button {
+ border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+ 
+ 
+}
+.content {
+  max-width: 700px;
+  margin: auto;
+  background:white ;
+  padding: 10px;
+}
+
+</style>
+<script >
+function validfirst(){
+ var x= document.getElementById("fname").value;
+ if(x=="")
+ {
+	
+	 //document.getElementById("para1").innerHTML="Enter Name here";
+	 //document.getElementById("para1").style.color.size="red ";
+	  alert(" First Name is not filled");
+ }
+ else
+ {
+	 document.getElementById("para1").innerHTML="Input accepted";
+	 document.getElementById("para1").style.color="darkgreen";
+	 
+ }
+	  }
+	  
+	  
+	
+
+
+function validlast() {
+  var y = document.getElementById("lname").value;
+  if (y == "") {
+   alert(" Last Name is not filled");
+    
+  }
+  else
+ {
+	 document.getElementById("para2").innerHTML="Input accepted";
+	 document.getElementById("para2").style.color="green";
+	 
+ }
+  
+  }
+
+
+
+function calculatePrice(){
+		
+var a = document.getElementById("fname").value;
+var b = document.getElementById("lname").value;
+var cn = document.getElementById("cnmbr").value;
+var c1 = document.getElementById("cake1").value;
+var c2= document.getElementById("cake2").value;
+var c3= document.getElementById("cake3").value;
+var c4= document.getElementById("cake4").value;
+var cook1= document.getElementById("cookie1").value;
+var cook2= document.getElementById("cookie2").value;
+var textmsg =document.getElementById("ms1").value;
+
+if (cook1==1) {
+
+	var out=(c1*70)+(c2*85)+(c3*20)+(c4*15)+(cook1*20);
+}
+else if (cook2==1 ) {
+
+	var out=(c1*70)+(c2*85)+(c3*20)+(c4*15)+(cook2*20);
+}
+
+
+		 
+		  
+document.getElementById("test").innerHTML="<strong>YOUR ORDER SUMMARY:</strong>";
+document.getElementById("test").style.color="black";
+document.getElementById("test1").innerHTML="Name:"+a+" "+b + " <br>Contact Number:"+ cn;
+document.getElementById("test1").style.color = "grey";
+document.getElementById("ordertot").style.color = "grey";
+document.getElementById("ordertot").innerHTML = "Order Total: $"+ out;
+document.getElementById("hbd").innerHTML= "Special instructions:"+textmsg;
+document.getElementById("hbd").style.color="grey";
+document.getElementById("message").innerHTML = " THANKS FOR SHOPPING";
+document.getElementById("message").style.color="black";
+            
+	
+	}
+	
+</script>
+</head>
+
+
+
+<body>
+<div class="content">
+
+<h1 align="center" size="80px" style=" color: purple;">  CWAZY CAKEZ &#127856 </h1>
+<p align="center" size="70px" style="color: red;"> <strong>Order now</strong></p>
+<img src="https://static.toiimg.com/photo/48201473.cms" align="center" width="50%">
+
+
+<form>
+
+ <p class="heading1"><strong>Please enter the details below</strong></p>
+    First name:<br>
+	<input  type="text" name="fname"  placeholder="Your name.." id="fname" onblur="validfirst()" autocomplete="off">
+	<p id="para1"></p>
+	
+	last name:<br>
+	<input type="text" id="lname" name="lname"  placeholder="Your last name.." onblur="validlast()" autocomplete="off">
+	<p id="para2"></p>
+
+	contact number:<br>
+	<input type="text" name="contact number" id="cnmbr" required placeholder="xxx-xxx-xxxx" autocomplete="off" ><br>
+	Address:<br>
+	<input type="text" name="adrs"  placeholder="15-b greenwich st.."  required autocomplete="off"><br>
+	
+	landmark:<br>
+	<input type="text" name="landmark" required placeholder="near dfo essendon" autocomplete="off"><br>
+	<tr>
+	<p  class="heading2"> <strong>Order the most spongiest cake!</strong></p>
+	Pineapple cake ($70)<input type="number"  name="cake1" id="cake1"  min="0" max="5">
+	Fudgy Chocolate Cake ($85)<input type="number"   name="cake2" id="cake2" min="0" max="5"><br>
+	
+
+	<p  class="heading1"> <strong> Special Sandwich(12 items per tray)$20</strong></p><br>
+	Quantity<input type="number"   name="cake3" id="cake3"   min="0" max="10">Type<select id="cake3" name="cake3">
+  <option value="Chicken">Chicken</option>
+  <option value="Ham & Cheese">Ham & Cheese</option>
+  <option value="Tuna">Tuna</option><br>
+</select>
+
+ <p class="heading2"> <strong>Donuts Assorted(12 items per box)$15</strong></p><br>
+	Quantity<input type= "number"  name="cake4" id="cake4"   min="0" max="10"><br>
+
+	 <p class="heading3"><strong>Freshly baked cookies for $20 only!</strong></p>
+	 <p class="subheading">(15 items per box)</p>
+  <input type ="radio" id="cookie1"   name="cookie" value="1" > <label for="1">Chocolate cookies</label> 
+  <input type ="radio"  id="cookie2" name="cookie"  value="1" > <label for="1">Vanilla cookies</label> <br>
+  
+  
+  
+   <br>Special instructions<br>
+    <textarea id="ms1" name="Special instructions" placeholder="avoid using walnuts.."></textarea><br>
+	 Add a complimentary chocolate browny<input type="checkbox" name="order" > <br>
+ 
+  	<button class="button" type="button" onclick="calculatePrice()">order now</button>
+  
+  <p id="test"></p>
+   <h3 id="test1"></h3>
+    <h3 id="ordertot"></h3>
+	 <h3 id="hbd"></h3>
+	  <h3 id="message"></h3>
+	 
+	
+	</form>
+</body>
+</html>
