@@ -1,6 +1,12 @@
 # order-online
-I made a website for online food delivering service. Here I used HTML, CSS and JavaScript.
-This is a very basic website design. 
+🏆 Languages/Frameworks Used:
+
+🍧 HTML
+🍧 CSS
+🍧 JS
+
+🏆 Software:
+🏝️ DEV-C++
 
 
 please navigate to my project
